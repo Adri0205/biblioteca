@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión | Sistema de Servicios Bibliotecarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="d-flex flex-column vh-100">
+
+    <header class="header d-flex justify-content-between align-items-center px-4 py-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 0a2 2 0 0 1 2 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2-2zM2 4v10h12V4H2z"/>
+        </svg>
+        <div>
+          <h5 class="mb-0 text-white">Sistema de Servicios Bibliotecarios</h5>
+          <small class="text-white-50">Universidad Don Bosco</small>
+        </div>
+      </div>
+    </header>
+
+    <div class="d-flex flex-grow-1">
+      <aside class="sidebar p-3">
+        <nav class="nav flex-column">
+          <a href="registro-libros.html" class="nav-link">🏠 Registro Libros</a>
+          <a href="../index.html" class="nav-link">🖊️ Registro Autores</a>
+          <a href="prestamos.html" class="nav-link">📚 Préstamos</a>
+          <a href="devoluciones.html" class="nav-link">↩️ Devoluciones</a>
+          <a href="calculo-mora.html" class="nav-link">💰 Cálculo de mora</a>
+          <a href="reporte-libros.html" class="nav-link">📈 Reporte Libros más leídos</a>
+          <a href="login.html" class="nav-link logout selected">🚪 Cerrar Sesión</a>
+        </nav>
+      </aside>
+
+      <main class="content flex-grow-1 p-4 d-flex align-items-center justify-content-center">
+        <div class="card shadow-sm p-4" style="max-width: 400px;">
+          <h5 class="text-center mb-4 border-bottom pb-2">Iniciar Sesión</h5>
+          
+          <div class="d-flex justify-content-center mb-4">
+            <div class="text-center me-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="mb-2" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+              </svg>
+              <p class="mb-0">Estudiante</p>
+            </div>
+            <div class="text-center ms-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="mb-2" viewBox="0 0 16 16">
+                <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+              </svg>
+              <p class="mb-0 fw-bold text-primary">Bibliotecario</p>
+            </div>
+          </div>
+
+          <form>
+            <div class="mb-3">
+              <label class="form-label">ID Usuario:</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg>
+                </span>
+                <input type="text" class="form-control" placeholder="Introduzca su código">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Contraseña:</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                  </svg>
+                </span>
+                <input type="password" class="form-control" placeholder="********">
+              </div>
+            </div>
+            <a href="registro-libros.html" class="btn btn-primary w-100 py-2">Entrar</a>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
