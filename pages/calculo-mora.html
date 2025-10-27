@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cálculo de Mora | Sistema de Servicios Bibliotecarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="d-flex flex-column vh-100">
+    <!-- Encabezado -->
+    <header class="header d-flex justify-content-between align-items-center px-4 py-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 0a2 2 0 0 1 2 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2-2zM2 4v10h12V4H2z"/>
+        </svg>
+        <div>
+          <h5 class="mb-0 text-white">Sistema de Servicios Bibliotecarios</h5>
+          <small class="text-white-50">Universidad Don Bosco</small>
+        </div>
+      </div>
+      <div class="d-flex align-items-center text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
+        </svg>
+        <span>XX12345</span>
+      </div>
+    </header>
+
+    <div class="d-flex flex-grow-1">
+
+      <aside class="sidebar p-3">
+        <nav class="nav flex-column">
+          <a href="registro-libros.html" class="nav-link">🏠 Registro Libros</a>
+          <a href="../index.html" class="nav-link">🖊️ Registro Autores</a>
+          <a href="prestamos.html" class="nav-link">📚 Préstamos</a>
+          <a href="devoluciones.html" class="nav-link">↩️ Devoluciones</a>
+          <a href="calculo-mora.html" class="nav-link selected">💰 Cálculo de mora</a>
+          <a href="reporte-libros.html" class="nav-link">📈 Reporte Libros más leídos</a>
+          <a href="#" class="nav-link logout">🚪 Cerrar Sesión</a>
+        </nav>
+      </aside>
+
+
+      <main class="content flex-grow-1 p-4">
+        <div class="card shadow-sm p-4 mx-auto" style="max-width: 700px;">
+          <h5 class="mb-3 text-center border-bottom pb-2">Cálculo de Mora</h5>
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label">Código del Préstamo:</label>
+                <input type="text" class="form-control" placeholder="Ej: P003">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Días de Retraso:</label>
+                <input type="number" class="form-control" min="0" placeholder="Ej: 4">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Monto por Día ($):</label>
+              <input type="number" class="form-control" step="0.01" placeholder="Ej: 0.50">
+            </div>
+            <button type="button" class="btn btn-primary w-100">Calcular Mora</button>
+          </form>
+
+          <div class="mt-4">
+            <h6 class="text-center border-bottom pb-2">Historial de Cálculos</h6>
+            <div class="table-responsive mt-3">
+              <table class="table table-striped align-middle text-center">
+                <thead>
+                  <tr>
+                    <th>Préstamo</th>
+                    <th>Días</th>
+                    <th>Total ($)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>P001</td>
+                    <td>3</td>
+                    <td>1.50</td>
+                  </tr>
+                  <tr>
+                    <td>P002</td>
+                    <td>5</td>
+                    <td>2.50</td>
+                  </tr>
+                  <tr class="text-muted">
+                    <td colspan="3">...</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

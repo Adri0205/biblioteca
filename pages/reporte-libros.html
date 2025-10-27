@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte de Libros más Leídos | Sistema de Servicios Bibliotecarios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="d-flex flex-column vh-100">
+
+    <header class="header d-flex justify-content-between align-items-center px-4 py-2">
+      <div class="d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="white" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 0a2 2 0 0 1 2 2h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2-2zM2 4v10h12V4H2z"/>
+        </svg>
+        <div>
+          <h5 class="mb-0 text-white">Sistema de Servicios Bibliotecarios</h5>
+          <small class="text-white-50">Universidad Don Bosco</small>
+        </div>
+      </div>
+      <div class="d-flex align-items-center text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="me-2" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm4-3a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM2 14s-1 0-1-1 1-4 7-4 7 3 7 4-1 1-1 1H2z"/>
+        </svg>
+        <span>XX12345</span>
+      </div>
+    </header>
+
+    <div class="d-flex flex-grow-1">
+
+      <aside class="sidebar p-3">
+        <nav class="nav flex-column">
+          <a href="registro-libros.html" class="nav-link">🏠 Registro Libros</a>
+          <a href="../index.html" class="nav-link">🖊️ Registro Autores</a>
+          <a href="prestamos.html" class="nav-link">📚 Préstamos</a>
+          <a href="devoluciones.html" class="nav-link">↩️ Devoluciones</a>
+          <a href="calculo-mora.html" class="nav-link">💰 Cálculo de mora</a>
+          <a href="reporte-libros.html" class="nav-link selected">📈 Reporte Libros más leídos</a>
+          <a href="#" class="nav-link logout">🚪 Cerrar Sesión</a>
+        </nav>
+      </aside>
+
+ 
+      <main class="content flex-grow-1 p-4">
+        <div class="row g-3">
+
+          <div class="col-lg-4">
+            <div class="card shadow-sm p-4">
+              <h5 class="mb-3 text-center border-bottom pb-2">Filtros del Reporte</h5>
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Período:</label>
+                  <select class="form-select">
+                    <option selected>Último mes</option>
+                    <option>Últimos 3 meses</option>
+                    <option>Últimos 6 meses</option>
+                    <option>Último año</option>
+                    <option>Todo el tiempo</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Categoría:</label>
+                  <select class="form-select">
+                    <option selected>Todas las categorías</option>
+                    <option>Novela</option>
+                    <option>Ciencia Ficción</option>
+                    <option>Historia</option>
+                    <option>Ciencias</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Cantidad de libros:</label>
+                  <select class="form-select">
+                    <option selected>Top 10</option>
+                    <option>Top 20</option>
+                    <option>Top 50</option>
+                    <option>Todos</option>
+                  </select>
+                </div>
+                <button type="button" class="btn btn-primary w-100">Generar Reporte</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="card shadow-sm p-4 mb-3">
+              <h5 class="text-center border-bottom pb-2">Gráfico de Préstamos</h5>
+              <div class="text-center py-4 text-muted">
+                <!-- Placeholder para el gráfico -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="mb-3" viewBox="0 0 16 16">
+                  <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"/>
+                  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                </svg>
+                <p>Gráfico de barras mostrando la frecuencia de préstamos</p>
+              </div>
+            </div>
+
+            <div class="card shadow-sm p-4">
+              <h5 class="text-center border-bottom pb-2">Libros más Leídos</h5>
+              <div class="table-responsive mt-3">
+                <table class="table table-striped align-middle">
+                  <thead>
+                    <tr>
+                      <th>Posición</th>
+                      <th>Título</th>
+                      <th>Autor</th>
+                      <th>Categoría</th>
+                      <th>Préstamos</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Cien años de soledad</td>
+                      <td>Gabriel García Márquez</td>
+                      <td>Novela</td>
+                      <td>45</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>1984</td>
+                      <td>George Orwell</td>
+                      <td>Ciencia Ficción</td>
+                      <td>38</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>El principito</td>
+                      <td>Antoine de Saint-Exupéry</td>
+                      <td>Literatura</td>
+                      <td>32</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Don Quijote</td>
+                      <td>Miguel de Cervantes</td>
+                      <td>Novela</td>
+                      <td>29</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Física Universitaria</td>
+                      <td>Sears Zemansky</td>
+                      <td>Ciencias</td>
+                      <td>25</td>
+                    </tr>
+                    <tr class="text-muted">
+                      <td colspan="5" class="text-center">...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
